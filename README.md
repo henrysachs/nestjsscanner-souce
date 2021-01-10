@@ -75,5 +75,7 @@ Nest is [MIT licensed](LICENSE).
 start redis
 
 ```
-docker run -p 6379:6379 --name nest-redis -d redis redis-server --appendonly yes 
+docker run -p 6379:6379 --name nest-redis -d redis redis-server --appendonly yes
+gitleaks --path=$(pwd) --config-path=/mnt/d/Projects/nestjsscanner-replica/.gitleaks/config.toml -v --report=my-report.json
+trufflehog file:////mnt/d/Projects/nestjsscanner-replica --json --exclude_paths ./.gitleaks/exclude-patterns.txt > trufflehog-report.json
 ```

@@ -16,7 +16,7 @@ import { SCMConsumer } from './scm-info';
       name: 'scan_scm',
       settings: { lockDuration: 10000, lockRenewTime: 10000 },
     }),
-    SCMConsumer,
+    // SCMConsumer,
   ],
   controllers: [AppController],
   providers: [AppService],
