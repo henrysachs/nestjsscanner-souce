@@ -2,8 +2,6 @@ import { BullModule } from '@nestjs/bull';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SCMConsumer } from './scm-info';
-
 @Module({
   imports: [
     BullModule.forRoot({
@@ -16,7 +14,6 @@ import { SCMConsumer } from './scm-info';
       name: 'scan_scm',
       settings: { lockDuration: 10000, lockRenewTime: 10000 },
     }),
-    // SCMConsumer,
   ],
   controllers: [AppController],
   providers: [AppService],
